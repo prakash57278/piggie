@@ -1,0 +1,25 @@
+#security:
+#  oauth2:
+#    client:
+#      clientId: account-service
+#      clientSecret: password #${ACCOUNT_SERVICE_PASSWORD}
+#      accessTokenUri: http://auth-service:5000/uaa/oauth/token
+#      grant-type: client_credentials
+#      scope: server
+
+spring:
+  data:
+    mongodb:
+      host: 127.0.0.1
+      username: user
+      password: password # ${MONGODB_PASSWORD}
+      database: piggymetrics
+      port: 26000 #27017
+  cloud:
+    circuitbreaker:
+      hystrix:
+        enabled: true
+server:
+  servlet:
+    context-path: /accounts
+  port: 6000

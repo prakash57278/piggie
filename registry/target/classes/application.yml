@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: registry
+  config:
+    import:
+    - configserver:http://localhost:8888
+  cloud:
+    config:
+      password: passowrd # ${CONFIG_SERVICE_PASSWORD}
+      username: user
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    wait-time-in-ms-when-sync-empty: 0

@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: gateway
+  config:
+    import:
+    - configserver:http://localhost:8888
+  cloud:
+    config:
+      password: passowrd # ${CONFIG_SERVICE_PASSWORD}
+      username: user
