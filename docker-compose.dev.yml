@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  account-mongodb:
+    build: mongodb
+    ports:
+      - 26000:27017
+  statistics-mongodb:
+    build: mongodb
+    ports:
+      - 27000:27017
+
+  notification-mongodb:
+    build: mongodb
+    ports:
+      - 28000:27017
+  auth-mongodb:
+    build: mongodb
+    ports:
+      - 29000:27017
